@@ -13,8 +13,8 @@ import rx.Observable;
 
 public interface ApiService {
     @FormUrlEncoded
-    @POST("")
-    Observable<SuccessDao> postLogin(
+    @POST("exec")
+    Observable<SuccessDao> postUpload(
             @Field("id") String id,
             @Field("nameImage") String nameImage,
             @Field("image") String image,

@@ -1,6 +1,8 @@
 package com.tommyputranto.myapplication.dagger;
 
 import com.tommyputranto.myapplication.api.core.CoreApi;
+import com.tommyputranto.myapplication.main.MainRequest;
+import com.tommyputranto.myapplication.main.MainRequestImpl;
 
 import javax.inject.Singleton;
 
@@ -19,23 +21,9 @@ public class NetModule {
         return new CoreApi();
     }
 
-//    @Singleton
-//    @Provides
-//    HomeViewRequest provideHomeViewRequest(CoreApi api){
-//        return new HomeViewRequestImpl(api);
-//    }
-//
-//    @Singleton
-//    @Provides
-//    NextViewRequest provideNextViewRequest(CoreApi api){
-//        return new NextViewRequestImpl(api);
-//    }
-
-//    @Singleton
-//    @Provides
-//    ReportViewRequest provideReportViewRequest(CoreApi api){
-//        return new ReportViewRequestImpl(api);
-//    }
-
-
+    @Singleton
+    @Provides
+    MainRequest provideMainViewRequest(CoreApi api){
+        return new MainRequestImpl(api);
+    }
 }

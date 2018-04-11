@@ -1,5 +1,7 @@
 package com.tommyputranto.myapplication.dagger;
 
+import com.tommyputranto.myapplication.MainActivity;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -14,10 +16,5 @@ import dagger.Component;
         NetModule.class
 })
 public interface DiComponent {
-
-  //  void inject(HomeVM homeVM);
-  //  void inject(TestVM testVM);
-//    void inject(NextVM nextVM);
-//    void inject(ReportVM reportVM);
-
+    void inject(MainActivity mainActivity);
 }

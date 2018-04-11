@@ -26,6 +26,7 @@ public class CoreApp extends Application {
     public static Gson getGson(){
         return gson;
     }
+
     public static CoreApi getAPiCore(){
         api.CoreApi();
         return api;

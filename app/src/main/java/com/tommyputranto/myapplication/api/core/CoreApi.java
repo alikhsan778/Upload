@@ -21,9 +21,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class CoreApi {
-    public static final String BASE_URL = "http://temaninspeksi.esy.es/TestSlim/v1/";
-    ApiService apiService;
+    //MARK: BASE URL FROM GOOGLE SCRIPT
+    public static final String BASE_URL = "https://script.google.com/macros/s/AKfycbyPSPXGJSY9FtZp7Hm390Sx3XewhAdUsqe-gSnF2mChELoTRIUU/";
 
+
+    ApiService apiService;
     public void CoreApi() {
         Retrofit retrofit;
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
@@ -63,11 +65,7 @@ public class CoreApi {
             request = reqBuilder.build();
             Response response = chain.proceed(request);
             String rawJson = response.body().string();
-            if (!response.isSuccessful()) {
-                return response.newBuilder().body(ResponseBody.create(response.body().contentType(), rawJson)).build();
-            } else {
-                return response.newBuilder().body(ResponseBody.create(response.body().contentType(), rawJson)).build();
-            }
+            return response.newBuilder().body(ResponseBody.create(response.body().contentType(), rawJson)).build();
         }
     }
 

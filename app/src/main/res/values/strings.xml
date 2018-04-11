@@ -3,4 +3,5 @@
     <string name="image_name">Nama gambar</string>
     <string name="add_image">Tambah Gambar</string>
     <string name="upload">Upload</string>
+    <string name="progress_message">Loading</string>
 </resources>
