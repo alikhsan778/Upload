@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CoreApi {
     //MARK: BASE URL FROM GOOGLE SCRIPT
-    public static final String BASE_URL = "https://script.google.com/macros/s/AKfycbyPSPXGJSY9FtZp7Hm390Sx3XewhAdUsqe-gSnF2mChELoTRIUU/";
+    public static final String BASE_URL = "https://script.google.com/macros/s/YOUR_ID_APPS_SCRIPT/";
 
 
     ApiService apiService;

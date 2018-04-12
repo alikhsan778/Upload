@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.imageName) EditText imageName;
     @BindView(R.id.photo) CropImageView photo;
 
-    private String id = "16u_WDzz9iY47QT5bWSBAPp0yUO7ouZB4duO0lZF9RNM"; // ID KEY GOOGLE SHEET
+    private String id = ""; // ID KEY GOOGLE SHEET
     private String sheet = "Sheet1"; // NAME SHEET
 
     private String imageEncodeBase64 = "";
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onError(String errorMessage) {
                         hideProgressDialog();
+                        Toast.makeText(getApplicationContext(), errorMessage, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
